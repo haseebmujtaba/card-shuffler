@@ -1,3 +1,6 @@
+## 1.0.1
+
+* Fixed imports and updated example app.
 ## 1.0.0
 
 * Initial release.

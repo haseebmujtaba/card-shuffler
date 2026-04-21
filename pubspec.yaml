@@ -1,6 +1,6 @@
 name: card_shuffler_2
 description: A Dart package for shuffling, dealing, and managing playing card decks. Supports standard 52-card decks, custom decks, multiple shuffle algorithms, and dealing hands.
-version: 1.0.0
+version: 1.0.1
 homepage: https://github.com/haseebmujtaba/card-shuffler
 
 environment:

@@ -5,7 +5,7 @@
   "packages": [
     {
       "name": "card_shuffler_2",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "dependencies": [],
       "devDependencies": [
         "flutter_lints",
