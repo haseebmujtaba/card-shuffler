@@ -1,4 +1,4 @@
-import 'package:card_shuffler/card_shuffler.dart';
+import 'package:card_shuffler_2/card_shuffler.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(const CardShufflerApp());
@@ -267,13 +267,14 @@ class _AlgorithmsTabState extends State<AlgorithmsTab> {
           Text('Choose algorithm:',
               style: Theme.of(context).textTheme.titleSmall),
           const SizedBox(height: 4),
-          ...ShuffleAlgorithm.values.map((algo) => RadioListTile<ShuffleAlgorithm>(
-                value: algo,
-                groupValue: _selected,
-                title: Text(_algoName(algo)),
-                subtitle: Text(_algoDesc(algo)),
-                onChanged: (v) => setState(() => _selected = v!),
-              )),
+          ...ShuffleAlgorithm.values
+              .map((algo) => RadioListTile<ShuffleAlgorithm>(
+                    value: algo,
+                    groupValue: _selected,
+                    title: Text(_algoName(algo)),
+                    subtitle: Text(_algoDesc(algo)),
+                    onChanged: (v) => setState(() => _selected = v!),
+                  )),
           const SizedBox(height: 4),
           Center(
             child: FilledButton.icon(
@@ -288,7 +289,8 @@ class _AlgorithmsTabState extends State<AlgorithmsTab> {
           Wrap(
             spacing: 6,
             runSpacing: 4,
-            children: _shuffled.take(13).map((c) => _CardChip(card: c)).toList(),
+            children:
+                _shuffled.take(13).map((c) => _CardChip(card: c)).toList(),
           ),
         ],
       ),
@@ -301,10 +303,9 @@ class _CardTile extends StatelessWidget {
   final PlayingCard card;
   const _CardTile({required this.card});
 
-  Color get _color =>
-      (card.suit == Suit.hearts || card.suit == Suit.diamonds)
-          ? Colors.red.shade300
-          : Colors.white;
+  Color get _color => (card.suit == Suit.hearts || card.suit == Suit.diamonds)
+      ? Colors.red.shade300
+      : Colors.white;
 
   @override
   Widget build(BuildContext context) {
@@ -321,8 +322,7 @@ class _CardTile extends StatelessWidget {
           Text(card.rank.symbol,
               style: TextStyle(
                   color: _color, fontSize: 13, fontWeight: FontWeight.bold)),
-          Text(card.suit.symbol,
-              style: TextStyle(color: _color, fontSize: 11)),
+          Text(card.suit.symbol, style: TextStyle(color: _color, fontSize: 11)),
         ],
       ),
     );
@@ -333,10 +333,9 @@ class _CardChip extends StatelessWidget {
   final PlayingCard card;
   const _CardChip({required this.card});
 
-  Color get _color =>
-      (card.suit == Suit.hearts || card.suit == Suit.diamonds)
-          ? Colors.red.shade300
-          : Colors.white;
+  Color get _color => (card.suit == Suit.hearts || card.suit == Suit.diamonds)
+      ? Colors.red.shade300
+      : Colors.white;
 
   @override
   Widget build(BuildContext context) {
@@ -347,8 +346,8 @@ class _CardChip extends StatelessWidget {
         borderRadius: BorderRadius.circular(8),
         border: Border.all(color: Colors.white24),
       ),
-      child:
-          Text(card.toString(), style: TextStyle(color: _color, fontWeight: FontWeight.bold)),
+      child: Text(card.toString(),
+          style: TextStyle(color: _color, fontWeight: FontWeight.bold)),
     );
   }
 }

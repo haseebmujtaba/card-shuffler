@@ -21,6 +21,6 @@
 library card_shuffler;
 
 export 'src/playing_card.dart';
-export 'src/card_shuffler.dart';
+export 'src/card_shuffler_2.dart';
 export 'src/card_deck.dart';
 export 'src/hand_dealer.dart';

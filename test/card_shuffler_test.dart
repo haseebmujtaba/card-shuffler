@@ -1,6 +1,6 @@
 import 'dart:math';
 
-import 'package:card_shuffler/card_shuffler.dart';
+import 'package:card_shuffler_2/card_shuffler_2.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {
