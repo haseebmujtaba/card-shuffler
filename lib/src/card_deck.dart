@@ -1,6 +1,6 @@
 import 'dart:math';
 
-import 'card_shuffler.dart';
+import 'card_shuffler_2.dart';
 import 'playing_card.dart';
 
 /// A deck of [PlayingCard]s with shuffle, deal, cut, and reset capabilities.
