@@ -1,4 +1,4 @@
-import 'package:card_shuffler_2/card_shuffler.dart';
+import 'package:card_shuffler_2/card_shuffler_2.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(const CardShufflerApp());
